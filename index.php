@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'accueil</title>
-</head>
-<body>
-    jhechkfkchfjcfckfchkfch
-</body>
-</html>
+<?php
+// index.php - Page d'accueil
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+    header('Location: pages/dashboard.php');
+} else {
+    header('Location: login.php');
+}
+exit;
+?>
